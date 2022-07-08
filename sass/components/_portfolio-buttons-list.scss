@@ -1,0 +1,30 @@
+.buttons-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 46px;
+
+  @media screen and(min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 56px;
+  }
+}
+
+.buttons-list__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and(max-width: 767px) {
+    margin-bottom: 15px;
+
+    &:nth-child(n + 4) {
+      margin-bottom: 0px;
+    }
+  }
+}
